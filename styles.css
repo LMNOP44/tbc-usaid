@@ -1,0 +1,443 @@
+:root {
+    --bg-primary: #161616;
+    --bg-header: #1a1e1f;
+    --tbc-blue: #00adee;
+    --bg-secondary: #2b2b2b;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg-primary);
+    color: white;
+    font-family: "FiraGO", sans-serif;
+  }
+  
+  header {
+    background-color: var(--bg-header);
+    height: 84px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding-inline: 25px;
+  }
+  
+  main {
+    margin-top: 84px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    display: flex;
+    gap: 50px;
+  }
+  
+  nav div:nth-child(3) {
+    color: var(--tbc-blue);
+  }
+  
+  nav > div {
+    transition: 300ms ease;
+    cursor: pointer;
+  }
+  
+  nav > div:hover {
+    color: var(--tbc-blue);
+  }
+  
+  .tbc-logo {
+    width: 182px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .tbc-usaid {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 84px);
+  }
+  
+  .tbc-team-banner {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+  }
+  
+  .tbc-team-banner-text {
+    font-size: 42px;
+    font-weight: 900;
+  }
+  
+  .tbc-team-banner-text-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .title {
+    top: 40%;
+  }
+  
+  .description {
+    top: 50%;
+    left: 35%;
+    font-size: 34px;
+    font-feature-settings: "case" on;
+  }
+  
+  .tbc-team-banner-wrapper {
+    position: relative;
+  }
+  
+  .info {
+    background-color: var(--bg-secondary);
+    /* height: 100%; */
+    margin-top: -10px;
+    padding-inline: 23%;
+    padding-block: 50px;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .info > p {
+    line-height: 1.6em;
+    height: 280px;
+  }
+  
+  .info-more {
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--tbc-blue);
+    transition: all 200ms ease-in-out;
+  }
+  
+  .info-more:hover {
+    color: grey;
+  }
+  
+  .courses {
+    margin-top: 50px;
+    padding-inline: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+  
+  .courses > h2 {
+    font-weight: normal;
+    align-self: flex-start;
+  }
+  
+  .courses-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .course-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(85, 85, 85);
+    width: 300px;
+    height: 414px;
+    border-radius: 5px;
+  }
+  
+  .course-item-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
+  }
+  
+  .course-item-info-main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .course-item-info h3 {
+    font-weight: normal;
+  }
+  
+  .course-item-info-main p:nth-child(2) {
+    font-size: 15px;
+  }
+  
+  .course-item-details {
+    color: var(--tbc-blue);
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  .course-item-details:hover {
+    color: #00adff9f;
+  }
+  
+  .slider-wrapper {
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-inline: 23%;
+    padding-block: 70px;
+    position: relative;
+  }
+  
+  .slider-wrapper > h1 {
+    font-weight: normal;
+  }
+  
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: appear 500ms ease-in;
+  }
+  
+  .slide-image {
+    width: 240px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .first-slide {
+    display: block;
+  }
+  
+  .arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 60%;
+    cursor: pointer;
+  }
+  
+  .left-arrow {
+    left: 5%;
+  }
+  
+  .right-arrow {
+    transform: rotate(180deg);
+    right: 5%;
+  }
+  
+  .faq {
+    padding-inline: 23%;
+    padding-block: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .faq-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .faq-title > h1 {
+    font-weight: normal;
+    font-size: 24px;
+  }
+  
+  .faq-title > p {
+    color: var(--tbc-blue);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  hr {
+    opacity: 0.1;
+  }
+  
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .accordion-title > p {
+    font-size: 18px;
+  }
+  
+  .accordion-item {
+    cursor: pointer;
+  }
+  
+  .down-arrow {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    transition: 200ms ease-in;
+  }
+  
+  .accordion-content {
+    transition: 500ms ease-in;
+    animation: appear 500ms ease-in;
+    padding-block: 20px;
+    cursor: auto;
+  }
+  
+  .footer {
+    background-color: var(--bg-header);
+    padding-inline: 23%;
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .footer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-item img:nth-child(1) {
+    object-fit: contain;
+  }
+  
+  .footer-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-icons img {
+    cursor: pointer;
+  }
+  
+  .footer-item-terms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-item-terms > p {
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  .footer-item-terms > p:hover {
+    color: grey;
+  }
+  
+  button {
+    font-family: "FiraGO", sans-serif;
+  }
+  
+  .contact-us-button {
+    padding-inline: 30px;
+    padding-block: 10px;
+    background-color: var(--tbc-blue);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .contact-us-button:hover {
+    background-color: grey;
+  }
+  
+  .rotate {
+    transform: rotate(90deg);
+  }
+  
+  .none {
+    display: none;
+  }
+  
+  .appear-animation {
+    animation: appear 500ms ease-in;
+  }
+  
+  .dissapear-animation {
+    animation: dissapear 500ms ease-in;
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes disappear {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    nav {
+      display: none;
+    }
+  
+    header {
+      justify-content: flex-start;
+    }
+  
+    .info > p {
+      font-size: 18px;
+    }
+  
+    .tbc-team-banner-text-wrapper {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .info,
+    .courses,
+    .slider-wrapper,
+    .faq,
+    .footer {
+      padding-inline: 5%;
+    }
+  }
+  
